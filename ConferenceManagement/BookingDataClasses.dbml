@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ConferenceDB" Class="BookingDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ConferenceDB.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="ConferenceManagement.Properties.Settings" SettingsPropertyName="ConferenceDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TimeTable" Member="TimeTables">
+    <Type Name="TimeTable">
+      <Column Name="TimeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TimePeriod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BookingTable" Member="BookingTables">
+    <Type Name="BookingTable">
+      <Column Name="BookingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoomNumber" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="BookingDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BookingTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="BookingTable_RoomTable" Member="RoomTables" ThisKey="RoomNumber" OtherKey="RoomId" Type="RoomTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoomTable" Member="RoomTables">
+    <Type Name="RoomTable">
+      <Column Name="RoomId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoomSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Available" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="BookingTable_RoomTable" Member="BookingTable" ThisKey="RoomId" OtherKey="RoomNumber" Type="BookingTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

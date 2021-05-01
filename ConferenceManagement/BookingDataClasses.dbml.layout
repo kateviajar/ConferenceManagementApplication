@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BookingDataClasses">
+  <DataContextMoniker Name="/BookingDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cb5125c2-8520-4483-a672-265faef68958" absoluteBounds="1.25, 3.625, 2, 1.1677168782552077">
+      <DataClassMoniker Name="/BookingDataClassesDataContext/TimeTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25d8d5ab-04b4-4e14-bcf1-abbbba1065ff" absoluteBounds="1.2650000000000001, 4.085, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0214d8ff-bee5-48d9-981e-21f827e9dd14" absoluteBounds="1.125, 0.75, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/BookingDataClassesDataContext/BookingTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce25c44c-0ab5-46b1-be50-df004fcd1527" absoluteBounds="1.1400000000000001, 1.21, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4672dc9b-bdb4-49f6-adef-7939f0a775ba" absoluteBounds="4, 0.875, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/BookingDataClassesDataContext/RoomTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="026112ac-ddfc-4067-9a17-64352503eb0d" absoluteBounds="4.015, 1.335, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 1.55125549316406); (4 : 1.55125549316406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BookingDataClassesDataContext/BookingTable/BookingTable_RoomTable" />
+      <nodes>
+        <classShapeMoniker Id="0214d8ff-bee5-48d9-981e-21f827e9dd14" />
+        <classShapeMoniker Id="4672dc9b-bdb4-49f6-adef-7939f0a775ba" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
